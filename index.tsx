@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { HashRouter, useLocation } from 'react-router-dom';
+import { BrowserRouter, useLocation } from 'react-router-dom';
+import './index.css';
 
 // Component to scroll to top on route change
 const ScrollToTop = () => {
@@ -20,9 +21,9 @@ if (!rootElement) {
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <ScrollToTop />
       <App />
-    </HashRouter>
+    </BrowserRouter>
   </React.StrictMode>
 );
